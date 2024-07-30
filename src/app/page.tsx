@@ -1,113 +1,227 @@
-import Image from "next/image";
+import { CiSearch } from "react-icons/ci";
+import { FiPlus } from "react-icons/fi";
+import { PiArrowsDownUpThin } from "react-icons/pi";
+import { RxHamburgerMenu } from "react-icons/rx";
+
+
+
+const dumyData = [
+  {
+    label: "das Aufsehen",
+    description: "sensation, furore, attention",
+    tag: ['B2', 'Noun']
+  },
+  {
+    label: "der Tisch",
+    description: "table; meal",
+    tag: ['A1', 'Noun']
+  },
+  {
+    label: "verwenden",
+    description: "to use; to make expenses applied on a material object; to intercede; to turn away",
+    tag: ['B1', 'Verb']
+  },
+  {
+    label: "der Tisch",
+    description: "table; meal",
+    tag: ['A1', 'Noun']
+  },
+  {
+    label: "verwenden",
+    description: "to use; to make expenses applied on a material object; to intercede; to turn away",
+    tag: ['B1', 'Verb']
+  },
+  {
+    label: "der Tisch",
+    description: "table; meal",
+    tag: ['A1', 'Noun']
+  },
+  {
+    label: "verwenden",
+    description: "to use; to make expenses applied on a material object; to intercede; to turn away",
+    tag: ['B1', 'Verb']
+  },
+]
+
+const listNumber = [
+  {
+    number: 1,
+    color: 'boxOrange'
+  },
+  {
+    number: 1,
+    color: 'boxOrange'
+  },
+  {
+    number: 0,
+    color: 'boxGrey'
+  },
+  {
+    number: 0,
+    color: 'boxGrey'
+  },
+  {
+    number: 0,
+    color: 'boxGrey'
+  },
+  {
+    number: 0,
+    color: 'boxGrey'
+  },
+  {
+    number: 1,
+    color: 'boxOrange'
+  },
+  {
+    number: 0,
+    color: 'boxGrey'
+  },
+  {
+    number: 0,
+    color: 'boxGrey'
+  },
+  {
+    number: 1,
+    color: 'boxOrange'
+  },
+  {
+    number: 0,
+    color: 'boxGrey'
+  },
+  {
+    number: 0,
+    color: 'boxGrey'
+  },
+  {
+    number: 0,
+    color: 'boxGrey'
+  },
+  {
+    number: 0,
+    color: 'boxGrey'
+  },
+  {
+    number: 10,
+    color: 'boxGreen'
+  },
+
+]
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="w-full max-w-sm  mx-auto min-h-screen flex flex-col md:max-w-full">
+
+      {/* Navbar */}
+      <div className=" bg-dark text-white uppercase items-center p-3  text-center     ">
+        <div className="w-full flex gap-2  text-xs lg:max-w-5xl  mx-auto relative lg:text-lg lg:gap-4  divide-x ">
+          <p className="px-1 md:px-4 cursor-pointer">Home</p>
+          <p className="px-1 md:px-4 cursor-pointer">Videos</p>
+          <p className="underline underline-offset-[5px] lg:underline-offset-8 px-1 md:px-4 cursor-pointer "> Vocabulary</p>
+          <p className="px-1 md:px-4 cursor-pointer ">flashcards</p>
+          <RxHamburgerMenu className="text-2xl absolute right-2 cursor-pointer border-none" />
         </div>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* End Navbar */}
+
+      {/* content */}
+      <div className="flex  flex-1 flex-col gap-5 mb-10  mx-auto  w-full lg:max-w-4xl">
+
+
+
+        <div className="flex flex-col lg:flex-row  items-center w-full  gap-10 mt-10">
+
+
+          {/* Icon Plus */}
+          <div className="">
+            <FiPlus size={70} color="white" className="bg-green rounded-full" />
+          </div>
+
+
+          <div className="flex-1 space-y-2 hidden lg:block">
+            <h4 className=" text-3xl">Words added in the last 2 weeks</h4>
+            <div className="flex w-full text-xs font-semibold gap-2">
+              {
+                listNumber.map((item, index) => (
+                  <span className={`border bg-${item.color} w-6 h-6 flex items-center justify-center`} key={index}> {item.number} </span>
+                ))
+              }
+            </div>
+          </div>
+
+
+          {/* Total Words */}
+          <div className="flex flex-row items-center text-3xl font-medium text-black gap-3 lg:text-dark  md:flex-col ">
+            <h3 className="lg:font-normal">Total words </h3>
+            <h3 className="lg:text-5xl lg:font-bold">75</h3>
+          </div>
+
+
+        </div>
+
+
+        {/* Flex Input and Sort */}
+        <div className="flex flex-col lg:flex-row w-full gap-5">
+
+
+          {/* INPUT */}
+          <div className="w-full  px-8 relative flex  lg:px-0">
+            <input type="text" name="" id="" placeholder="Enter a word or translation" className="border w-full p-1 pl-10 pr-1 text-md" />
+            <CiSearch className="absolute top-1/2  -translate-y-1/2 left-9 lg:left-2" size={30} />
+            <div className="bg-grey w-14 border flex justify-center items-center cursor-pointer">
+              <p>de</p>
+            </div>
+          </div>
+
+
+          {/* SORT */}
+          <div className="flex justify-center items-center text-xl gap-5  min-w-[200px]">
+            <h4 className="lg:text-sm">Newest first</h4>
+            <PiArrowsDownUpThin size={40} />
+          </div>
+
+        </div>
+
+
+
+
+        {/* LIST */}
+        <div className="gap-10">
+
+          {dumyData.map((data, index) => (
+            <div key={index} className={`w-full flex bg ${index % 2 === 0 ? 'bg-olive' : 'bg-white'}  px-5 py-3 justify-between `}>
+              <div className=" w-2/3">
+                <h3 className="font-bold">{data.label}</h3>
+                <p className="text-sm">{data.description}</p>
+              </div>
+              <div className=" w-1/3 flex  gap-2  justify-end">
+
+                {data.tag.map((tag, index) => (
+                  <p className="border  rounded-full h-fit text-xs px-2 font-medium border-black" key={index}>{tag}</p>
+                ))}
+              </div>
+
+            </div>
+          ))}
+
+
+        </div>
+
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* End content */}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      {/* Footer */}
+      <div className="w-full flex justify-center items-center gap-8 p-3 bg-grey text-sm font-semibold text-textDark ">
+        <p>About</p>
+        <p>Teams</p>
+        <p>Privacy</p>
+        <p>Contact us</p>
       </div>
-    </main>
+      {/* End Footer */}
+
+    </main >
   );
 }
